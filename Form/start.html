@@ -15,62 +15,66 @@
     </style>
   </head>
   <body>
-    <div class="registration">
-      <form action="#">
+    <div id="registration-form">
+      <form action="#" method="post">
 
-          <label for="email">Inserisci email:</label>
-          <input type="email" name="email" placeholder=" es. example@gmail.com" required>
+        <label for="email">Inserisci email</label>
+        <input type="email" name="email" 
+                placeholder="es. mariorossi@gmail.com" required
+        >
+
+        <label for="password">Inserisci password</label>
+        <input type="password" name="password" required>
+
+        <label for="first_name">Inserisci nome</label>
+        <input type="text" name="first_name" required
+                pattern="[A-Za-z]+" minlength="2" maxlength="20"
+        >
+
+        <label for="last_name">Inserisci cognome</label>
+        <input type="text" name="last_name" required
+                pattern="[A-Za-z]+" minlength="2" maxlength="20"
+        >
+
+        <label for="birth_date">Inserisci data di nascita</label>
+        <input type="date" name="birth_date" max="2009-12-31" required>
+
+        <label for="phone_number">Inserisci numero di telefono</label>
+        <input type="tel" name="phone_number" pattern="[0-9]+" required>
+        <br>
+
+        <label for="plan">Scegli il piano</label>
+        <select id="plan" name="plan">
+          <option value="free">Free plan</option>
+          <option value="low">1.99$</option>
+          <option value="mid">2.99$</option>
+          <option value="high">4.99$</option>
+        </select>
+        <br>
+
+        <input type="checkbox" name="pro" id="pro" value="iscrizione_pro">
+        <label for="pro">Piano pro</label>
+
+        <label for="credit_card">Inserisci numero carta di credito</label>
+        <input type="text" name="credit_card"
+                pattern="[0-9]+" minlength="16" maxlength="16"
+        >
         
-          <label for="password">Inserisci password:</label>
-          <input type="password" name="password" required>
+        <label for="cvc">Inserisci CVC</label>
+        <input type="text" name="cvc" 
+                pattern="[0-9]+" minlength="3" maxlength="3"
+        >
 
-          <label for="first_name">Inserisci il tuo nome:</label>
-          <input type="text" 
-                placeholder="Nome" name="first_name" 
-                required maxlength="20" minlength="2" pattern="[A-Za-z]+"
-          >
+        <label for="exp_date">Inserisci data di scadenza</label>
+        <input type="date" name="exp_date" min="2023-04-07">
 
-          <label for="last_name">Inserisci il tuo cognome:</label>
-          <input type="text"
-                placeholder="Nome" name="last_name" 
-                required maxlength="20" minlength="2" pattern="[A-Za-z]+"
-          >
+        <label for="address">Inserisci indirizzo di fatturazione</label>
+        <input type="text" name="address">
+        <br>
+        <br>
 
-          <label for="birthday">Inserisci la data di nascita:</label>
-          <input type="date" name="birthday" required>
-
-          <label for="telephone">Inserisci il numero di telefono:</label>
-          <input type="tel" name="telephone" pattern="[0-9]+" required>
-
-          <label for="plan">Scegli piano:</label>
-          <select name="plan" id="plan">
-            <option value="free">Free plan
-            <option value="1.99$">1.99$
-            <option value="3.99$">3.99$
-            <option value="5.99$">5.99$
-          </select>
-          <br>
-
-          <input type="checkbox" name="pro" value="iscritto_pro">
-          <label for="pro">PRO Plan</label>
-
-          <label for="credit_card">Inserisci numero carta di credito:</label>
-          <input type="text" 
-                  name="credit_card" required maxlength="16" 
-                  minlength="16" pattern="[0-9]+"
-          >
-
-          <label for="cvc">Inserisci CVC:</label>
-          <input type="text" 
-                  name="cvc" required maxlength="3" 
-                  minlength="3" pattern="[0-9]+"
-          >
-
-          <label for="expiration_date">Inserisci data di scadenza:</label>
-          <input type="date" name="expiration_date" required>
-
-          <label for="address">Inserisci indirizzo di fatturazione:</label>
-          <input type="text" name="address" required>
+        <button>Registrati</button>
+      
       </form>
     </div>
   </body>
