@@ -46,16 +46,20 @@
         <label for="plan">Scegli il piano</label>
         <select id="plan" name="plan">
           <option value="free">Free plan</option>
-          <option value="low">1.99$</option>
-          <option value="mid">2.99$</option>
-          <option value="high">4.99$</option>
+            <optgroup label="Piano mensile">
+              <option value="low">1.99$</option>
+              <option value="mid">2.99$</option>
+              <option value="high">4.99$</option>
+            </optgroup>
         </select>
         <br>
 
-        <input type="checkbox" name="pro" id="pro" value="iscrizione_pro">
         <label for="pro">Piano pro</label>
+        <input type="checkbox" name="pro" id="pro" value="iscrizione_pro">
 
-        <label for="credit_card">Inserisci numero carta di credito</label>
+
+        <!-- Non ho aggiunto required per la carta di credito e l'indirizzo perchè mi sembrava più opportuno così-->
+        <label for="credit_card">Inserisci numero carta di credito</label> 
         <input type="text" name="credit_card"
                 pattern="[0-9]+" minlength="16" maxlength="16"
         >
@@ -73,7 +77,8 @@
         <br>
         <br>
 
-        <button>Registrati</button>
+        <!-- La traccia non specificava di inserire il bottone ma essendo un form ero indeciso e l'ho aggiunto -->
+        <button type="submit">Registrati</button>
       
       </form>
     </div>
