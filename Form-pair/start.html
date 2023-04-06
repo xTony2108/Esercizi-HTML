@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration">
+      <form action="#">
+
+          <label for="email">Inserisci email:</label>
+          <input type="email" name="email" placeholder=" es. example@gmail.com" required>
+        
+          <label for="password">Inserisci password:</label>
+          <input type="password" name="password" required>
+
+          <label for="first_name">Inserisci il tuo nome:</label>
+          <input type="text" 
+                placeholder="Nome" name="first_name" 
+                required maxlength="20" minlength="2" pattern="[A-Za-z]+"
+          >
+
+          <label for="last_name">Inserisci il tuo cognome:</label>
+          <input type="text"
+                placeholder="Nome" name="last_name" 
+                required maxlength="20" minlength="2" pattern="[A-Za-z]+"
+          >
+
+          <label for="birthday">Inserisci la data di nascita:</label>
+          <input type="date" name="birthday" required>
+
+          <label for="telephone">Inserisci il numero di telefono:</label>
+          <input type="tel" name="telephone" pattern="[0-9]+" required>
+
+          <label for="plan">Scegli piano:</label>
+          <select name="plan" id="plan">
+            <option value="free">Free plan
+            <option value="1.99$">1.99$
+            <option value="3.99$">3.99$
+            <option value="5.99$">5.99$
+          </select>
+          <br>
+
+          <input type="checkbox" name="pro" value="iscritto_pro">
+          <label for="pro">PRO Plan</label>
+
+          <label for="credit_card">Inserisci numero carta di credito:</label>
+          <input type="text" 
+                  name="credit_card" required maxlength="16" 
+                  minlength="16" pattern="[0-9]+"
+          >
+
+          <label for="cvc">Inserisci CVC:</label>
+          <input type="text" 
+                  name="cvc" required maxlength="3" 
+                  minlength="3" pattern="[0-9]+"
+          >
+
+          <label for="expiration_date">Inserisci data di scadenza:</label>
+          <input type="date" name="expiration_date" required>
+
+          <label for="address">Inserisci indirizzo di fatturazione:</label>
+          <input type="text" name="address" required>
+      </form>
+    </div>
+  </body>
+</html>
